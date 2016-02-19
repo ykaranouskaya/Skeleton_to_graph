@@ -59,11 +59,6 @@ def numb(skel_mat) :
     arr = (fil * mask)[1:-1,1:-1,1:-1].astype('uint8')
     return arr
     
-    
-#a = np.random.random_integers(0,1,(3,3,3))
-#b = np.zeros((3,3,3))
-#b[1,1,:] = 1
-
 
 def label(skel_mat):
     """
@@ -210,8 +205,6 @@ def edges(Graph, a_m):
 
 
 
-#creating of branches by removal of connection points,
-# the length of the branches is writen as an attribute
 def branches(Graph):
     """
     Modifies the connections of the input graph in a way
@@ -261,28 +254,7 @@ def branches(Graph):
     return G    
     
 
-#def merge_nodes(G,nodes, new_node, attr_dict=None, **attr):
-#    """
-#    Merges the selected `nodes` of the graph G into one `new_node`,
-#    meaning that all the edges that pointed to or from one of these
-#    `nodes` will point to or from the `new_node`.
-#    attr_dict and **attr are defined as in `G.add_node`.
-#    """
-#    
-#    G.add_node(new_node, attr_dict, **attr) # Add the 'merged' node
-#    
-#    for n1,n2,data in G.edges(data=True):
-#        # For all edges related to one of the nodes to merge,
-#        # make an edge going to or coming from the `new gene`.
-#        if n1 in nodes:
-#            G.add_edge(new_node,n2,data)
-#        elif n2 in nodes:
-#            G.add_edge(n1,new_node,data)
-#    
-#    for n in nodes: # remove the merged nodes
-#        G.remove_node(n)    
 
-#edges(G, a_m)
 
 def clust(Graph):
     """
